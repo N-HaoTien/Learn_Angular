@@ -1,18 +1,27 @@
 <div class="container">
     
-    <input class="border border-radius" #val type="text" value="{{ Name }}">
-    <button type="button" (click)="onClick(val.value)" class="btn btn-danger">
-        Button2
-    </button>
-    <p >Name is :{{Name}}</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Height</th>
+            <th scope="col">TransferVal</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of Person;let index = index">
+            <th scope="row">{{index}}</th>
+            <td>{{person.Name}}</td>
+            <td [ngClass]="{'text-danger fw-bold' : person.Age > 25}">{{person.Age}}</td>
+            <td>{{person.Height}}</td>
+            <td>{{person.TransferVal}}</td>
 
-    <input class="border border-radius" #val1 (keyup)="getName2(val1.value)" type="text" value="{{ Name2 }}">
-    <p>Name is : {{Name2}}</p>
-
-    <input class="border border-radius" type="text" [(ngModel)] ="Name" >
-    <p>Name is : {{Name}}</p>
-    <button type="button" (click)="onClick(resetName())" class="btn btn-primary">
-        Reset
-    </button>
+            <td>{{ person.TransferVal | onSale | uppercase }}</td>
+          </tr>
+        </tbody>
+      </table>
 </div>
 

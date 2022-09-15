@@ -11,6 +11,17 @@ export class TestComponent implements OnInit,AfterViewInit,OnChanges,OnDestroy {
   public Name : string | undefined;
   public Name2 : string | undefined;
 
+  public Person = [
+    {
+      Name : "Văn Quyết", Age: 30 , Height : "1m80",TransferVal : 1000000000
+    },
+    {
+      Name : "Công Phượng", Age: 27, Height : "1m78",TransferVal : 3000000000
+    },
+    {
+      Name : "Nhâm Mạnh Dũng", Age: 21, Height : "1m8",TransferVal : 5000000000
+    },
+  ]
   ngOnDestroy(): void {
     console.log('ngOnDestroy')
 
