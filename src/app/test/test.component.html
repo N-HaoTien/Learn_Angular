@@ -1,4 +1,19 @@
-<div class="container">
+
+  <div class="row" style="padding-left: 100px ;">
+    <div class="col-md-4">
+      <select  class="form-select " (change)="ngOnChanges($event)"  style="width:300px">
+        <option *ngFor="let city of cities" value="{{city.Province}}">{{city.Province}} </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-select " style="width:300px">
+        <option *ngFor="let district of districtsnew " value="{{district}}"> {{district}} </option>
+      </select>
+    </div>
+  </div>
+
+
+<div class="container" style="margin-top : 30px">
     
     <table class="table">
         <thead>
