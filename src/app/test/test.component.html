@@ -1,0 +1,18 @@
+<div class="container">
+    
+    <input class="border border-radius" #val type="text" value="{{ Name }}">
+    <button type="button" (click)="onClick(val.value)" class="btn btn-danger">
+        Button2
+    </button>
+    <p >Name is :{{Name}}</p>
+
+    <input class="border border-radius" #val1 (keyup)="getName2(val1.value)" type="text" value="{{ Name2 }}">
+    <p>Name is : {{Name2}}</p>
+
+    <input class="border border-radius" type="text" [(ngModel)] ="Name" >
+    <p>Name is : {{Name}}</p>
+    <button type="button" (click)="onClick(resetName())" class="btn btn-primary">
+        Reset
+    </button>
+</div>
+
