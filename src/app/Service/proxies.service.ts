@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 export class PeopleEntity {
   peoplE_ID: number | undefined;
   peoplE_TEN: string | undefined;
+  peoplE_HIGHT: string | undefined;
+  peoplE_AGE: string | undefined;
   peoplE_DIACHI: string | undefined;
   ghichu: string | undefined;
   creatE_DT: Date | undefined;
@@ -16,9 +18,10 @@ export class PeopleEntity {
       }
   }
   }
+  
 }
 export class PeopleService {
   private urlApi = "https:localhost:44372/api/people/"
-
+  
   constructor() { }
 }
