@@ -6,19 +6,25 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { OnSalePipe } from './on-sale.pipe';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     OnSalePipe,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
+  exports:[
+
+  ]
+  ,
   providers: [],
   bootstrap: [AppComponent]
 })
