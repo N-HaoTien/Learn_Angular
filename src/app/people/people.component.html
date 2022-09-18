@@ -1,0 +1,26 @@
+<p>people works!</p>
+
+<form (ngSubmit)="submitForm()">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Tên" name="peoplE_TEN" [(ngModel)]="inputFilter.peoplE_TEN">
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Địa Chỉ"name="peoplE_DIACHI" [(ngModel)]="inputFilter.peoplE_DIACHI">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Ghi Chú"name="ghichu" [(ngModel)]="inputFilter.ghichu">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Ngày tạo"name="creatE_DT" [(ngModel)]="inputFilter.creatE_DT">
+      </div>
+      <div>
+        <button class="btn btn-success">
+            Check
+        </button>
+      </div>
+</form>
