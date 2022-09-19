@@ -21,7 +21,7 @@ export class TestComponent implements OnInit,AfterViewInit,OnChanges,OnDestroy {
     {
       Name : "Nhâm Mạnh Dũng", Age: 21, Height : "1m80",TransferVal : 5000000000
     },
-  ]
+  ]  
   public cities = 
   [
     {Province : "Select Province" , districts : ["Select City"]},
