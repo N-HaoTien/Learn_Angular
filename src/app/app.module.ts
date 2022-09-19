@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
 import { PeopleComponent } from './people/people.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TestObservablesComponent } from './test-observables/test-observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     OnSalePipe,
     HomeComponent,
     PeopleComponent,
+    TestObservablesComponent,
   ],
   imports: [
     CommonModule,
