@@ -7,7 +7,6 @@ import { TestComponent } from './test/test.component';
 import { OnSalePipe } from './on-sale.pipe';
 import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
-import { PeopleComponent } from './people/people.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TestObservablesComponent } from './test-observables/test-observables.component';
 @NgModule({
@@ -16,7 +15,6 @@ import { TestObservablesComponent } from './test-observables/test-observables.co
     TestComponent,
     OnSalePipe,
     HomeComponent,
-    PeopleComponent,
     TestObservablesComponent,
   ],
   imports: [

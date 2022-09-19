@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PeopleEntity, PeopleService } from '../Service/proxies.service';
 
 @Component({
   selector: 'app-test-observables',
