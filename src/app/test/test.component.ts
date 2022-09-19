@@ -38,6 +38,9 @@ export class TestComponent implements OnInit,AfterViewInit,OnChanges,OnDestroy {
 ]
 ngOnChanges(_changes: any): void {
   console.log('ngOnChanges', _changes.target.value);
+  this.check = !this.check;
+  console.log('ngOnChanges', this.check);
+
   var districtsdata = this.cities.filter(data => data.Province === _changes.target.value);
   console.log('data districts',districtsdata);
   if(districtsdata && districtsdata.length > 0){
@@ -62,7 +65,7 @@ ngOnChanges(_changes: any): void {
   getName(input :any){
     this.Name = input;
   }
-  
+  check = false;
 
   
   ngAfterViewInit(): void {
