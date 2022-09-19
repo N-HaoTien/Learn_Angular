@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CategoryEntity, CategoryTestApiService } from '../Service/category-test-api.service';
 
@@ -7,9 +7,12 @@ import { CategoryEntity, CategoryTestApiService } from '../Service/category-test
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryComponent implements OnInit {
+export class CategoryComponent implements OnInit,OnChanges {
 
   constructor(public categoryService : CategoryTestApiService) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
    
   ngOnInit(): void {
     this.categoryService.getCategory().subscribe(data => {
