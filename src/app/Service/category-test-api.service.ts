@@ -12,16 +12,10 @@ export class CategoryTestApiService {
     headers : new HttpHeaders({'Content-Type' : 'application/json',}),
   };
   public formData : CategoryEntity = new CategoryEntity();
-  public list : CategoryEntity [] |any;
   public base_Url = 'https://localhost:7231';
   public getCategory(): Observable<any>{
     const url = `${this.base_Url}/api/Category/GetAll`
     return this.http.get<any>(url,this.httpOptions);
-  }
-  public Refresh(){
-    const url = `${this.base_Url}/api/Category/GetAll`;
-    this.http.get(url).toPromise()
-              .then(res => this.list = res as CategoryEntity[]);
   }
   public AddCategory(){
     const url = `${this.base_Url}/api/Category/AddCategory`

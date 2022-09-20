@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3 mt-5">
+
+    <div class="card">
+        <h4 class="card-header">Role-Based-Authorization</h4>
+
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit(signForm)" #signForm="ngForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input class="form-control" id="taikhoan" name="taikhoan" type="text" ngModel />
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" name="password" type="password" ngModel />
+                </div>
+                <button type="submit" class="btn btn-success" style="margin-top:10px ;">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

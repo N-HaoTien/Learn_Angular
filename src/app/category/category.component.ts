@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CategoryEntity, CategoryTestApiService } from '../Service/category-test-api.service';
 
@@ -7,28 +7,23 @@ import { CategoryEntity, CategoryTestApiService } from '../Service/category-test
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryComponent implements OnInit,OnChanges {
-
+export class CategoryComponent implements OnInit {
   constructor(public categoryService : CategoryTestApiService) { }
-  ngOnChanges(changes: SimpleChanges): void {
-    throw new Error('Method not implemented.');
-  }
-   
   ngOnInit(): void {
-    this.categoryService.getCategory().subscribe(data => {
-      this.listCategory = data;
-      console.log("Get this.listCategory",this.listCategory);
-
-      console.log("Get Category",data);
+    this.categoryService.getCategory().subscribe(res =>{
+      this.listCategory = res;
+      console.log("Get Category",this.listCategory);
     });
-    console.log("Get Category2",this.categoryService.list);
   }
   onSubmit(form:NgForm){
     this.categoryService.AddCategory().subscribe
     (res => {
       this.resetform(form);
-      this.categoryService.Refresh();
-    })
+    });
+    this.categoryService.getCategory().subscribe(res =>{
+      this.listCategory = res;
+      console.log("Get Category",this.listCategory);
+    });
   }
   resetform(form:NgForm){
     form.form.reset();

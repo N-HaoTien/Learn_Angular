@@ -2,21 +2,32 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
-  <h1>Đây là Component App</h1>
-  <ul>
-    <li>
-      <a class="btn btn-success" routerLink="/test" routerLinkActive="active">TestComponent</a>
-    </li>
-    <li>
-      <a class="btn btn-success" routerLink="/home" routerLinkActive="active">HomeComponent</a>
-    </li>
-    <li>
-      <a class="btn btn-success" routerLink="/people" routerLinkActive="active">PeopleComponent</a>
-    </li>
-    <li>
-      <a class="btn btn-success" routerLink="/category" routerLinkActive="active">CategoryComponent</a>
-    </li>
-  </ul>
+  <h1>Trang Chủ</h1>
+  <nav *ngIf="userService.isAuth">
+    <ul >
+      <li>
+        <a class="btn btn-success" routerLink="/test" routerLinkActive="active">TestComponent</a>
+      </li>
+      <li>
+        <a class="btn btn-success" routerLink="/home" routerLinkActive="active">HomeComponent</a>
+      </li>
+      <li>
+        <a class="btn btn-success" routerLink="/people" routerLinkActive="active">PeopleComponent</a>
+      </li>
+      <li>
+        <a class="btn btn-success" routerLink="/category" routerLinkActive="active">CategoryComponent</a>
+      </li>
+      <li>
+        <a class="btn btn-success" routerLink="/account" routerLinkActive="active">AccountComponent</a>
+      </li>
+      <li>
+        <a class="btn btn-success" (click)="Logout()" routerLink="/login" routerLinkActive="active">LogoutComponent</a>
+      </li>
+    </ul>
+  </nav>
+    
+
+  
 <body>
   <router-outlet></router-outlet>
 </body>

@@ -16,7 +16,7 @@ export class PeopleEntity {
           if (data.hasOwnProperty(property))
               (<any>this)[property] = (<any>data)[property];
       }
-  }
+    }
   }
   
 }

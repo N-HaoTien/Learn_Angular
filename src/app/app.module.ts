@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { PeopleComponent } from './people/people.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
+import { AccountComponent } from './account/account.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,8 @@ import { CategoryComponent } from './category/category.component';
     HomeComponent,
     PeopleComponent,
     CategoryComponent,
+    AccountComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
