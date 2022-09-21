@@ -14,10 +14,11 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     console.log('Check Auth : ',this.userService.isAuth);
-    console.log('Infor Account : ',LoginComponent.account);
+    console.log('Infor Account : ',LoginComponent.getAccount);
   }
   Logout() : void{
     this.userService.isAuth = false;
+    LoginComponent.account = null;
     this.route.navigate(['login']);
   }
 }

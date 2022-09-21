@@ -14,8 +14,9 @@ export class UserService {
   };
   public isAuth = false ;
   public base_Url = 'https://localhost:7231';
-  public CheckLogin(user : any,password:any): Observable<any>{
-    const url = `${this.base_Url}/api/User/CheckLogin`+ '?user='+user+'&pass='+password
+  public CheckLogin(user : any,password:any): Observable<any>
+  {
+    const url = `${this.base_Url}/api/User/CheckLogin`+ '?user='+user+'&pass='+password ;
     return this.http.get<any>(url,this.httpOptions);
   }
   public ListUser(): Observable<any>{

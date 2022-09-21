@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PeopleComponent } from './people/people.component';
 import { TestComponent } from './test/test.component';
+import { ArticlesGuard } from './Guard/articles.guard'; 
 
 
 // thiết lập Các routing với nhau
@@ -16,11 +17,13 @@ const routes: Routes = [
   {path:"test" , component : TestComponent}, // Test component
   {path:"home" , component : HomeComponent}, // Homecomponent
   {path:"people" , component : PeopleComponent},
-  {path:"category" , component : CategoryComponent},
+  {path:"category" , component : CategoryComponent,
+      canActivate: [ArticlesGuard],
+  },
   {path:"account" , component : AccountComponent},
   {path:"login" , component : LoginComponent},
   {path:'' , component : LoginComponent},
-  {path:"**" , component : HomeComponent}
+  {path:"**" , component : LoginComponent}
 
 ];
 

@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
+import { LoginComponent } from '../login/login.component';
+import { UserService } from '../Service/user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticlesGuard implements CanActivate {
+  constructor(){}
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    state: RouterStateSnapshot): Observable<boolean>{
+    return LoginComponent.getAccount.pipe(map(user => !!user)) ;
   }
   
 }

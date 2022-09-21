@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { LoginComponent } from '../login/login.component';
 import { CategoryEntity, CategoryTestApiService } from '../Service/category-test-api.service';
 
 @Component({
@@ -16,10 +17,10 @@ export class CategoryComponent implements OnInit {
     });
   }
   onSubmit(form:NgForm){
-    this.categoryService.AddCategory().subscribe
-    (res => {
-      this.resetform(form);
-    });
+    // this.categoryService.AddCategory().subscribe
+    // (res => {
+    //   this.resetform(form);
+    // });
     this.categoryService.getCategory().subscribe(res =>{
       this.listCategory = res;
       console.log("Get Category",this.listCategory);
